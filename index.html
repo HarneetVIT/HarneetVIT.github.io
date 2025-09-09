@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harneet Kaur | Data Science Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-gray-900">Harneet Kaur</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#projects" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#skills" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#education" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                        <a href="#achievements" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Achievements</a>
+                        <a href="#certifications" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Certifications</a>
+                        <a href="#contact" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#skills" class="text-gray-600 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#education" class="text-gray-600 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Education</a>
+                <a href="#achievements" class="text-gray-600 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Achievements</a>
+                <a href="#certifications" class="text-gray-600 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Certifications</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+
+        <!-- Hero Section -->
+        <section id="home" class="text-center min-h-[60vh] flex flex-col justify-center items-center">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+                    Turning Complex Data into Clear, Actionable Insights
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+                    As a Data Science master's candidate with a distinguished academic background in Statistics, I'm driven by a natural curiosity for the stories hidden within data. I excel at building and refining machine learning models that turn complex information into clear, compelling insights. I am looking to join an innovative team where I can apply my skills to build products that solve real-world problems.
+                </p>
+                <div class="mt-10 flex justify-center gap-4">
+                    <a href="#contact" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition-colors duration-300">Get in Touch</a>
+                    <a href="#projects" class="bg-white text-indigo-600 font-semibold px-8 py-3 rounded-lg shadow-md border border-gray-200 hover:bg-gray-100 transition-colors duration-300">View My Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 md:py-32 section-fade-in">
+             <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-2">
+                    <img class="rounded-lg shadow-2xl w-full h-auto object-cover" src="profilephoto-harneet.png" alt="Portrait of Harneet Kaur">
+                </div>
+                <div class="md:col-span-3">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-4">About Me</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Hello! I'm Harneet, a data science enthusiast currently pursuing my Master's at VIT University. My journey from a statistics undergraduate to a data science professional is fueled by a passion for solving puzzles and uncovering hidden patterns in data. I believe that every dataset holds a story, and I enjoy the process of bringing that story to light through careful analysis and robust modeling.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Beyond the world of data, I lead a disciplined and balanced life. I enjoy long walks, which help me think and stay active, and I have a deep appreciation for music. This balance between analytical thinking and creative pursuits allows me to approach problems with a unique and holistic perspective. I'm excited to bring this blend of technical skill and creative problem-solving to a challenging new role.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 md:py-32 section-fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900">My Projects</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Here are some of the projects I've worked on that showcase my skills in machine learning and data analysis.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">NLP-Powered Mental Health Classification</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">Engineered an end-to-end NLP pipeline to classify mental health status from a dataset of over 53,000 posts, establishing a robust baseline for future deep learning models.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">NLP</span>
+                        <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Text Classification</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Python</span>
+                    </div>
+                    <a href="https://github.com/Harneet9602/Mental-Health-Classification" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-800 mt-auto">View on GitHub &rarr;</a>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Hybrid Product Recommendation System</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">Developed a hybrid recommendation engine using collaborative filtering and advanced NLP, leading to a 480% increase in product discovery for users.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Recommender Systems</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">NLP</span>
+                        <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Generative AI</span>
+                    </div>
+                    <a href="https://github.com/Harneet9602/Recommendation-System" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-800 mt-auto">View on GitHub &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 md:py-32 section-fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900">Technical Skills</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">A snapshot of the languages, frameworks, and tools I use to bring data-driven projects to life.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <!-- Languages & Programming -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-4 border-b pb-2">Languages & Programming</h4>
+                    <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                        <li><b>Python:</b> Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Plotly</li>
+                        <li><b>R</b></li>
+                        <li><b>SQL</b></li>
+                    </ul>
+                </div>
+                <!-- Data Analysis & Statistics -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-4 border-b pb-2">Data Analysis & Statistics</h4>
+                    <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                        <li>Exploratory Data Analysis (EDA)</li>
+                        <li>Hypothesis Testing & A/B Testing</li>
+                        <li>Statistical Inference & Modeling</li>
+                        <li>Probability Distributions & Theory</li>
+                    </ul>
+                </div>
+                <!-- Classical Machine Learning -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-4 border-b pb-2">Classical Machine Learning</h4>
+                    <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                        <li><b>Regression:</b> Linear, Logistic, Regularization (Ridge, Lasso)</li>
+                        <li><b>Classification:</b> SVM, Decision Trees, Random Forest, KNN</li>
+                        <li><b>Clustering:</b> K-Means</li>
+                        <li><b>Techniques:</b> Feature Engineering (TF-IDF, Word2Vec), Hyperparameter Tuning (GridSearchCV), Handling Class Imbalance (SMOTE)</li>
+                    </ul>
+                </div>
+                <!-- Deep Learning & NLP -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-4 border-b pb-2">Deep Learning & NLP</h4>
+                    <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                        <li><b>Frameworks:</b> TensorFlow, Keras</li>
+                        <li><b>Architectures:</b> LSTMs, Artificial Neural Networks (ANNs)</li>
+                        <li><b>Tasks:</b> Text Classification, Sentiment Analysis, NER, Topic Modeling</li>
+                        <li><b>Applications:</b> Recommender Systems, Generative AI & LLMs</li>
+                    </ul>
+                </div>
+                <!-- Tools, Systems & Big Data -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 md:col-span-2">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-4 border-b pb-2">Tools, Systems & Big Data</h4>
+                    <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                        <li><b>Development:</b> Git & GitHub, Jupyter Notebook, Google Colab</li>
+                        <li><b>Database Systems:</b> Relational database design (Normalization, ER Diagrams)</li>
+                        <li><b>Big Data (In Progress):</b> Apache Spark, Hadoop Ecosystem (HDFS, MapReduce)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 md:py-32 section-fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900">Education</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">My academic journey has provided me with a strong theoretical and practical foundation in statistics and data science.</p>
+            </div>
+            <div class="space-y-8 max-w-3xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-900">M.Sc. in Data Science</h3>
+                    <p class="text-indigo-600 font-medium mb-2">VIT University, Vellore (2024 – Present)</p>
+                    <p class="text-gray-600 mb-3">An intensive program focused on mastering the complete data science lifecycle, from data collection to predictive modeling.</p>
+                    <p class="text-sm font-semibold text-gray-700">Current CGPA: 9.46 <span class="font-normal text-gray-500">(Sem 1: 9.56, Sem 2: 9.35)</span></p>
+                </div>
+                 <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-900">B.Sc. (Hons.) in Statistics</h3>
+                    <p class="text-indigo-600 font-medium mb-2">BJB Autonomous College, Bhubaneswar (2020 – 2023)</p>
+                    <p class="text-gray-600 mb-3">Graduated with distinction, building a strong foundational knowledge of statistical theory and quantitative analysis. My consistent performance earned me the second-highest rank in the department.</p>
+                     <p class="text-sm font-semibold text-gray-700">Final CGPA: 9.3/10.0</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-900">Higher Secondary Education (CBSE)</h3>
+                    <p class="text-indigo-600 font-medium mb-2">Dalmia Vidya Mandir (2018 – 2020)</p>
+                    <p class="text-gray-600 mb-3">Established a strong record of academic excellence, graduating among the top students in my batch with a focus on Physics, Chemistry, and Mathematics.</p>
+                    <p class="text-sm font-semibold text-gray-700">Class 12: 93.4% &nbsp;&nbsp;|&nbsp;&nbsp; Class 10: 95.2%</p>
+               </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-20 md:py-32 section-fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900">Achievements</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Key academic and competitive examination results that highlight my dedication and proficiency.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 text-center">
+                    <h3 class="text-xl font-semibold text-gray-900">IIT JAM (Statistics)</h3>
+                    <p class="text-indigo-600 font-medium mt-2 text-2xl">AIR 607</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 text-center">
+                    <h3 class="text-xl font-semibold text-gray-900">CUET PG (Statistics)</h3>
+                    <p class="text-indigo-600 font-medium mt-2 text-2xl">AIR 348</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 text-center">
+                    <h3 class="text-xl font-semibold text-gray-900">Department Rank</h3>
+                    <p class="text-indigo-600 font-medium mt-2 text-2xl">2nd in B.Sc.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20 md:py-32 section-fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900">Certifications & Learning</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">A commitment to continuous learning and staying updated with the latest industry trends.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Cert 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-yellow-600 bg-yellow-200">Ongoing</span>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-2">100 Days of Machine Learning</h3>
+                    <p class="text-gray-500 text-sm">YouTube</p>
+                </div>
+                <!-- Cert 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-yellow-600 bg-yellow-200">Ongoing</span>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-2">100DaysOfCode in Python</h3>
+                    <p class="text-gray-500 text-sm">Udemy</p>
+                </div>
+                <!-- Cert 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                     <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200">Completed</span>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-2">Education on Sustainable Development</h3>
+                    <p class="text-gray-500 text-sm">NPTEL (100/100 Score)</p>
+                </div>
+                 <!-- Cert 4 -->
+                 <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200">Completed</span>
+                   <h3 class="text-lg font-semibold text-gray-900 mt-2">GenAI Cybersecurity</h3>
+                   <p class="text-gray-500 text-sm">Udemy</p>
+               </div>
+                <!-- Cert 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200">Completed</span>
+                  <h3 class="text-lg font-semibold text-gray-900 mt-2">Data Analytics using Excel</h3>
+                  <p class="text-gray-500 text-sm">Udemy</p>
+              </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 text-center section-fade-in">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900">Let's Connect</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">I'm currently seeking new opportunities and would love to hear from you. Feel free to reach out via email or connect with me on social media.</p>
+            <div class="mt-8 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
+                <a href="mailto:harneetkaur4464@gmail.com" class="text-lg font-medium text-indigo-600 hover:text-indigo-800">harneetkaur4464@gmail.com</a>
+                <span class="hidden md:inline text-gray-300">|</span>
+                <p class="text-lg font-medium text-gray-700">+91 8018724774</p>
+            </div>
+            <div class="mt-8 flex justify-center space-x-6">
+                <a href="https://github.com/Harneet9602" class="text-gray-500 hover:text-gray-900">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/harneet-k-a04649251/" class="text-gray-500 hover:text-gray-900">
+                    <span class="sr-only">LinkedIn</span>
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            <p>&copy; 2024 Harneet Kaur. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Intersection Observer for section fade-in animation
+        const sections = document.querySelectorAll('.section-fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
+
+
+
+
